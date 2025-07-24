@@ -7,7 +7,7 @@ import 'package:kyc_workflow/kyc_workflow.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:kyc_workflow/service_mode.dart';
 import 'dart:collection';
-
+import 'package:flutter_me/TestWebViewPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -106,12 +106,32 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: startKycWorkflow,
-        // onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      floatingActionButton: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          FloatingActionButton(
+            heroTag: 'kyc_btn',
+            onPressed: startKycWorkflow,
+            tooltip: 'Start KYC Workflow',
+            child: const Icon(Icons.add),
+          ),
+          const SizedBox(height: 16),
+          FloatingActionButton(
+            heroTag: 'webview_btn',
+            onPressed: openTestWebView,
+            tooltip: 'Open TestWebView',
+            child: const Icon(Icons.web),
+          ),
+        ],
+      ),
+
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: startKycWorkflow,
+      //   // onPressed: _incrementCounter,
+      //   tooltip: 'Increment',
+      //   child: const Icon(Icons.add),
+      // ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 
@@ -136,9 +156,9 @@ class _MyHomePageState extends State<MyHomePage> {
       // additionalData["dg_disable_upi_collect_flow"] = "false"; // optional for mandate
 
       workflowResult = await _kycWorkflowPlugin.start(
-          "KID250506111813554ONRYOJ83Q2BXXXK",
+          "KID250506111813554ONRYOJ8XX2BXXXK",
           "a@digio.in",
-          "GWT25050611181360747HL34EC5OI2NS",
+          "GWT25050611181360747HL34EC5OXXNS",
           additionalData
       );
       print('workflowResult : ' + workflowResult.toString());
@@ -155,6 +175,27 @@ class _MyHomePageState extends State<MyHomePage> {
       _workflowResult = workflowResult.toString();
     });
   }
+
+  void openTestWebView() async {
+    final result = await Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const TestWebViewPage(
+          docId: "KID250724142028563QCOONVXXXXFI",
+          identifier: "a@digio.in",
+          token: "GWT2507241420285736LEOVDXXXK2GS",
+          environment: "PRODUCTION",
+        ),
+      ),
+    );
+
+    if (result != null) {
+      setState(() {
+        _workflowResult = "WebView Result:\n$result";
+      });
+    }
+  }
+
 
 
 
