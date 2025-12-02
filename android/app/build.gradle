@@ -28,6 +28,8 @@ android {
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = 24
         targetSdk = 35
+        ndkVersion = "28.0.12433566"
+
 //        targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
@@ -43,8 +45,12 @@ android {
 
         }
         debug {
+            packagingOptions {
+                exclude "lib/**/libVkLayer*.so"
+            }
             signingConfig = signingConfigs.debug
-            minifyEnabled = false
+            minifyEnabled = true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
     buildFeatures {
@@ -56,7 +62,11 @@ android {
 flutter {
     source = "../.."
 }
+configurations.all {
+    exclude group: "com.google.mlkit", module: "face-detection"
+}
 dependencies {
 //    implementation fileTree(dir: "libs", include: ["*.aar"])
-    implementation 'com.github.digio-tech:protean-esign:v3.2'
+    implementation 'com.github.digio-tech:protean-esign:v3.12'
+    implementation 'com.google.android.gms:play-services-mlkit-face-detection:17.1.0'
 }

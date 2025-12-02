@@ -72,3 +72,7 @@
 -keep class javax.xml.bind.annotation.** { *; }
 -dontwarn javax.xml.bind.annotation.**
 -keep class com.ecs.cdslxsds.ESignProcessorResponse { *; }
+-keep class org.xmlpull.** { *; }
+#-dontwarn org.xmlpull.**
+-dontwarn org.xmlpull.v1.XmlPullParser
+-dontwarn android.content.res.XmlResourceParser

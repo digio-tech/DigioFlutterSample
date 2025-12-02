@@ -144,7 +144,7 @@ class _MyHomePageState extends State<MyHomePage> {
       digioConfig.theme.primaryColor = "#32a83a";
       digioConfig.logo =
       "https://www.gstatic.com/mobilesdk/160503_mobilesdk/logo/2x/firebase_28dp.png";
-      digioConfig.environment = Environment.SANDBOX;
+      digioConfig.environment = Environment.PRODUCTION;
       digioConfig.serviceMode = ServiceMode.OTP;
 
       final _kycWorkflowPlugin = KycWorkflow(digioConfig);
@@ -156,9 +156,9 @@ class _MyHomePageState extends State<MyHomePage> {
       // additionalData["dg_disable_upi_collect_flow"] = "false"; // optional for mandate
 
       workflowResult = await _kycWorkflowPlugin.start(
-          "KID250506111813554ONRYOJ8XX2BXXXK",
-          "a@digio.in",
-          "GWT25050611181360747HL34EC5OXXNS",
+          "ENA2512XXXXX32WN53QCW87WD5UP",
+          "abr@digio.in",
+          "GWT25120XXXX82FT1BOSKKT3HBQS",
           additionalData
       );
       print('workflowResult : ' + workflowResult.toString());
@@ -181,9 +181,9 @@ class _MyHomePageState extends State<MyHomePage> {
       context,
       MaterialPageRoute(
         builder: (context) => const TestWebViewPage(
-          docId: "KID250724142028563QCOONVXXXXFI",
-          identifier: "a@digio.in",
-          token: "GWT2507241420285736LEOVDXXXK2GS",
+          docId: "ENA250804160435159Q8FO3N6BXN9NAUP",
+          identifier: "akash.kumar@digio.in",
+          token: "GWT250804160435174RI8OZ12I6RQOOS",
           environment: "PRODUCTION",
         ),
       ),
