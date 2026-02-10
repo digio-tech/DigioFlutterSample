@@ -67,6 +67,10 @@ configurations.all {
 }
 dependencies {
 //    implementation fileTree(dir: "libs", include: ["*.aar"])
+//    implementation(platform("com.github.digio-tech:digio-bom:v1.0.41"))
+    implementation ("com.airbnb.android:lottie:6.6.6")
+
+    implementation("io.coil-kt:coil:2.6.0")
     implementation 'com.github.digio-tech:protean-esign:v3.12'
     implementation 'com.google.android.gms:play-services-mlkit-face-detection:17.1.0'
 }

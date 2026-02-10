@@ -1,8 +1,12 @@
 PODS:
+  - DigioEsignSDK (1.0.10)
+  - DigiokycSDK (2.0.0)
   - Flutter (1.0.0)
   - image_picker_ios (0.0.1):
     - Flutter
-  - kyc_workflow (1.2.14):
+  - kyc_workflow (2.0.15):
+    - DigioEsignSDK
+    - DigiokycSDK
     - Flutter
   - permission_handler_apple (9.3.0):
     - Flutter
@@ -17,6 +21,11 @@ DEPENDENCIES:
   - permission_handler_apple (from `.symlinks/plugins/permission_handler_apple/ios`)
   - webview_flutter_wkwebview (from `.symlinks/plugins/webview_flutter_wkwebview/darwin`)
 
+SPEC REPOS:
+  trunk:
+    - DigioEsignSDK
+    - DigiokycSDK
+
 EXTERNAL SOURCES:
   Flutter:
     :path: Flutter
@@ -30,9 +39,11 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/webview_flutter_wkwebview/darwin"
 
 SPEC CHECKSUMS:
+  DigioEsignSDK: e7695366fc8474d32af3a8a1d061e5ec2eecc32f
+  DigiokycSDK: 81c33a2dcc2b1d65715697e13e570acdbeecbd24
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
   image_picker_ios: c560581cceedb403a6ff17f2f816d7fea1421fc1
-  kyc_workflow: 846e540348a663cc27a92d54e24ec569e106f818
+  kyc_workflow: ed03c8003d6ac6df47a582c9fec16689b1053b5c
   permission_handler_apple: 9878588469a2b0d0fc1e048d9f43605f92e6cec2
   webview_flutter_wkwebview: a4af96a051138e28e29f60101d094683b9f82188
 

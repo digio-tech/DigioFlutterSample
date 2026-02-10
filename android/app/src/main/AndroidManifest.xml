@@ -20,10 +20,14 @@
     <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
 
+<!--
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+
+-->
     <application
         android:label="flutter_me"
         android:name="${applicationName}"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:theme="@style/t_SdkMaterialTheme"
         tools:replace="android:label,android:theme"
         android:icon="@mipmap/ic_launcher">
         <activity

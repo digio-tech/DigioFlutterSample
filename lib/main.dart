@@ -156,9 +156,9 @@ class _MyHomePageState extends State<MyHomePage> {
       // additionalData["dg_disable_upi_collect_flow"] = "false"; // optional for mandate
 
       workflowResult = await _kycWorkflowPlugin.start(
-          "ENA2512XXXXX32WN53QCW87WD5UP",
-          "abr@digio.in",
-          "GWT25120XXXX82FT1BOSKKT3HBQS",
+          "ENA26021XXXXXXV375OJGA12L8UP",
+          "akash.kumar@digio.in",
+          "GWT2602XXXXX1GIU1H6246LA33S",
           additionalData
       );
       print('workflowResult : ' + workflowResult.toString());
@@ -181,9 +181,9 @@ class _MyHomePageState extends State<MyHomePage> {
       context,
       MaterialPageRoute(
         builder: (context) => const TestWebViewPage(
-          docId: "ENA250804160435159Q8FO3N6BXN9NAUP",
-          identifier: "akash.kumar@digio.in",
-          token: "GWT250804160435174RI8OZ12I6RQOOS",
+          docId: "ENA250XXXXX59Q8FO3N6BXN9NAUP",
+          identifier: "abc@digio.in",
+          token: "GWT2508041XXXX6RQOOS",
           environment: "PRODUCTION",
         ),
       ),

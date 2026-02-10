@@ -23,7 +23,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>-->
 
-
+    <style name="t_SdkMaterialTheme"
+        parent="Theme.MaterialComponents.NoActionBar" />
 
 
 </resources>
