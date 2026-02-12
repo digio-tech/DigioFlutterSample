@@ -62,15 +62,21 @@ android {
 flutter {
     source = "../.."
 }
-configurations.all {
-    exclude group: "com.google.mlkit", module: "face-detection"
-}
+
+
+//configurations.all {
+//    exclude group: "androidx.camera", module: "camera-core"
+//    exclude group: "androidx.camera", module: "camera-camera2"
+//    exclude group: "androidx.camera", module: "camera-lifecycle"
+//    exclude group: "androidx.camera", module: "camera-view"
+//    exclude group: "androidx.camera", module: "camera-video"
+//    exclude group: "com.google.android.gms", module: "play-services-mlkit-face-detection"
+//
+//    exclude group: "com.github.digio-tech", module: "sdk_ml_camera"
+//}
+
 dependencies {
 //    implementation fileTree(dir: "libs", include: ["*.aar"])
-//    implementation(platform("com.github.digio-tech:digio-bom:v1.0.41"))
-    implementation ("com.airbnb.android:lottie:6.6.6")
 
-    implementation("io.coil-kt:coil:2.6.0")
     implementation 'com.github.digio-tech:protean-esign:v3.12'
-    implementation 'com.google.android.gms:play-services-mlkit-face-detection:17.1.0'
 }

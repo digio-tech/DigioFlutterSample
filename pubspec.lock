@@ -212,10 +212,10 @@ packages:
     dependency: "direct main"
     description:
       name: kyc_workflow
-      sha256: "3865ff7983892d268986b41650ee65eec41bf77e07e0d6b29507c96bf598cbc6"
+      sha256: "16389a16f26ed86b5739574a7f6360c181b4d9185a82b57092d843d657a2db00"
       url: "https://pub.dev"
     source: hosted
-    version: "2.0.17"
+    version: "2.0.18"
   leak_tracker:
     dependency: transitive
     description:

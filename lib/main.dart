@@ -125,13 +125,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
       ),
-
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: startKycWorkflow,
-      //   // onPressed: _incrementCounter,
-      //   tooltip: 'Increment',
-      //   child: const Icon(Icons.add),
-      // ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 
@@ -156,9 +149,9 @@ class _MyHomePageState extends State<MyHomePage> {
       // additionalData["dg_disable_upi_collect_flow"] = "false"; // optional for mandate
 
       workflowResult = await _kycWorkflowPlugin.start(
-          "ENA26021XXXXXXV375OJGA12L8UP",
-          "akash.kumar@digio.in",
-          "GWT2602XXXXX1GIU1H6246LA33S",
+          "KID260XXXXX4AUW7KNK",
+          "ak@digio.in",
+          "GWT2XXXXXXXXXXXXHLO9S",
           additionalData
       );
       print('workflowResult : ' + workflowResult.toString());
@@ -195,10 +188,6 @@ class _MyHomePageState extends State<MyHomePage> {
       });
     }
   }
-
-
-
-
 
   Future<void> requestPermissions() async {
     Map<Permission, PermissionStatus> statuses = await [
