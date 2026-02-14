@@ -137,7 +137,7 @@ class _MyHomePageState extends State<MyHomePage> {
       digioConfig.theme.primaryColor = "#32a83a";
       digioConfig.logo =
       "https://www.gstatic.com/mobilesdk/160503_mobilesdk/logo/2x/firebase_28dp.png";
-      digioConfig.environment = Environment.PRODUCTION;
+      digioConfig.environment = Environment.SANDBOX;
       digioConfig.serviceMode = ServiceMode.OTP;
 
       final _kycWorkflowPlugin = KycWorkflow(digioConfig);
@@ -149,9 +149,9 @@ class _MyHomePageState extends State<MyHomePage> {
       // additionalData["dg_disable_upi_collect_flow"] = "false"; // optional for mandate
 
       workflowResult = await _kycWorkflowPlugin.start(
-          "KID260XXXXX4AUW7KNK",
-          "ak@digio.in",
-          "GWT2XXXXXXXXXXXXHLO9S",
+          "KID2602XXXXXYGVXEKD7E4OK",
+          "akash.kumar@digio.in",
+          "GWT2602141XXXXI26I8MPRWDQ1ES",
           additionalData
       );
       print('workflowResult : ' + workflowResult.toString());
