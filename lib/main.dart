@@ -149,9 +149,9 @@ class _MyHomePageState extends State<MyHomePage> {
       // additionalData["dg_disable_upi_collect_flow"] = "false"; // optional for mandate
 
       workflowResult = await _kycWorkflowPlugin.start(
-          "KID2602XXXXXYGVXEKD7E4OK",
-          "akash.kumar@digio.in",
-          "GWT2602141XXXXI26I8MPRWDQ1ES",
+          "KID2602XXXXXPAB4VOP28MTCXN",
+          "ak@digio.in",
+          "GWT26021XXXXX97IFJ4FTA43NS",
           additionalData
       );
       print('workflowResult : ' + workflowResult.toString());
