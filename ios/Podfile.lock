@@ -1,6 +1,6 @@
 PODS:
   - DigioEsignSDK (1.0.10)
-  - DigiokycSDK (2.0.0)
+  - DigiokycSDK (2.0.3)
   - Flutter (1.0.0)
   - image_picker_ios (0.0.1):
     - Flutter
@@ -40,7 +40,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   DigioEsignSDK: e7695366fc8474d32af3a8a1d061e5ec2eecc32f
-  DigiokycSDK: 81c33a2dcc2b1d65715697e13e570acdbeecbd24
+  DigiokycSDK: 2bc28001a4442be8d935ff3e1ec4512b4fae5195
   Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
   image_picker_ios: c560581cceedb403a6ff17f2f816d7fea1421fc1
   kyc_workflow: ed03c8003d6ac6df47a582c9fec16689b1053b5c

@@ -76,3 +76,10 @@
 #-dontwarn org.xmlpull.**
 -dontwarn org.xmlpull.v1.XmlPullParser
 -dontwarn android.content.res.XmlResourceParser
+
+-keep class com.emudhra.** { *; }
+-keep interface com.emudhra.** { *; }
+-keepclassmembers class com.emudhra.** {
+    native <methods>;
+}
+-dontwarn com.emudhra.**

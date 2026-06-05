@@ -135,10 +135,9 @@ class _MyHomePageState extends State<MyHomePage> {
     try {
       var digioConfig = DigioConfig();
       digioConfig.theme.primaryColor = "#32a83a";
-      digioConfig.logo =
-      "https://www.gstatic.com/mobilesdk/160503_mobilesdk/logo/2x/firebase_28dp.png";
+      digioConfig.logo = "";
       digioConfig.environment = Environment.SANDBOX;
-      digioConfig.serviceMode = ServiceMode.OTP;
+      digioConfig.serviceMode = ServiceMode.FP;
 
       final _kycWorkflowPlugin = KycWorkflow(digioConfig);
       _kycWorkflowPlugin.setGatewayEventListener((GatewayEvent? gatewayEvent) {
@@ -146,12 +145,12 @@ class _MyHomePageState extends State<MyHomePage> {
       });
 
       HashMap<String, String> additionalData = HashMap<String, String>();
-      // additionalData["dg_disable_upi_collect_flow"] = "false"; // optional for mandate
+      additionalData["dg_disable_upi_collect_flow"] = "false"; // optional for mandate
 
       workflowResult = await _kycWorkflowPlugin.start(
-          "KID2602XXXXXPAB4VOP28MTCXN",
-          "ak@digio.in",
-          "GWT26021XXXXX97IFJ4FTA43NS",
+          "DID260605124209835D1KCXSNKKVSTQ5",
+          "akash.kumar@digio.in",
+          "GWT260417XXXXLCSQVNSUTS",
           additionalData
       );
       print('workflowResult : ' + workflowResult.toString());
