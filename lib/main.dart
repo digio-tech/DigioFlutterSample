@@ -148,8 +148,8 @@ class _MyHomePageState extends State<MyHomePage> {
       additionalData["dg_disable_upi_collect_flow"] = "false"; // optional for mandate
 
       workflowResult = await _kycWorkflowPlugin.start(
-          "DID260605124XXXXD1KCXSNKKVSTQ5",
-          "ak@digio.in",
+          "DID2606051800XXX2ZB",
+          "aka@digio.in",
           "GWT260417XXXXLCSQVNSUTS",
           additionalData
       );
